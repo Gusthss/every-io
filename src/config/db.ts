@@ -2,9 +2,11 @@ import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import logger from "../utils/logger";
 
+const MONGO_URL = process.env.MONGO_URL || 'mongodb://mongodb:27017/tasks'
+
 export const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/tasks');
+    await mongoose.connect(MONGO_URL);
     logger.info('MongoDB connected');
   } catch (err) {
     logger.error('MongoDB connection error:', err);

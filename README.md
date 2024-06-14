@@ -1,3 +1,12 @@
+# Setup
+
+To setup the service and database run:
+```sh 
+docker compose up 
+```
+
+The Apollo server will be exposed on http://localhost:4000
+
 # Getting Started with the Every.io engineering challenge.
 
 Thanks for taking the time to complete the Every.io code challenge. Don't worry, it's not too hard, and please do not spend more than an hour or two. We know you have lots of these to do, and it can be very time consuming.
