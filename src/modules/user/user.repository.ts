@@ -1,4 +1,4 @@
-import User, { IUser } from './user.model.js';
+import User, { IUser } from './user.model';
 
 export async function createUser(user: IUser) {
   const userModel = new User(user);

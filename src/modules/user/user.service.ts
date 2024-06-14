@@ -1,7 +1,7 @@
-import { IUser } from './user.model.js';
+import { IUser } from './user.model';
 import { AuthenticationError } from 'apollo-server';
-import * as userRepository from './user.repository.js';
-import * as auth from '../../utils/auth.js';
+import * as userRepository from './user.repository';
+import * as auth from '../../utils/auth';
 
 export async function register(_: any, user: IUser) {
   const newUser = await userRepository.createUser(user);

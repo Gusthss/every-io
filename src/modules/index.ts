@@ -1,7 +1,7 @@
-import { userTypeDefs } from './user/user.typeDefs.js';
-import { taskTypeDefs } from './task/task.typeDefs.js';
-import { userResolvers } from './user/user.resolvers.js';
-import { taskResolvers } from './task/task.resolvers.js';
+import { userTypeDefs } from './user/user.typeDefs';
+import { taskTypeDefs } from './task/task.typeDefs';
+import { userResolvers } from './user/user.resolvers';
+import { taskResolvers } from './task/task.resolvers';
 import { gql } from 'apollo-server';
 
 const rootTypeDefs = gql`

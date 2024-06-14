@@ -1,8 +1,8 @@
 import { ApolloServer } from 'apollo-server';
 
-import { connectDB } from './config/db.js';
-import { typeDefs, resolvers } from './modules/index.js';
-import { authMiddleware } from './utils/auth.js';
+import { connectDB } from './config/db';
+import { typeDefs, resolvers } from './modules';
+import { authMiddleware } from './utils/auth';
 
 const server = new ApolloServer({
   typeDefs,

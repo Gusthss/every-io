@@ -1,4 +1,4 @@
-import { addTask, getTasks, updateTask, archiveTask } from './task.service.js';
+import { addTask, getTasks, updateTask, archiveTask } from './task.service';
 
 export const taskResolvers = {
   Query: {

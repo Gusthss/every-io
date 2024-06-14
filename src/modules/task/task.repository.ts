@@ -1,4 +1,4 @@
-import Task, { ITask, TaskStatus } from './task.model.js';
+import Task, { ITask, TaskStatus } from './task.model';
 
 export async function findTasks(userId: string) {
   return Task.find({ user: userId });

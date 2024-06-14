@@ -1,4 +1,4 @@
-import { login, register } from './user.service.js';
+import { login, register } from './user.service';
 
 export const userResolvers = {
   Mutation: {

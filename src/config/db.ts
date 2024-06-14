@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { MongoMemoryServer } from 'mongodb-memory-server';
 
 export const connectDB = async () => {
   try {
@@ -9,3 +10,22 @@ export const connectDB = async () => {
     process.exit(1);
   }
 };
+
+export function inMemoryDB() {
+  let mongod: any;
+  return {
+    async create() {
+      // This will create an new instance of "MongoMemoryServer" and automatically start it
+      mongod = await MongoMemoryServer.create();
+
+      const uri = mongod.getUri();
+
+      await mongoose.connect(uri + 'tasks');
+      console.log('MongoDB connected');
+    },
+    async stop() {
+      await mongod.stop();
+      console.log('MongoDB stopped');
+    }
+  }
+}

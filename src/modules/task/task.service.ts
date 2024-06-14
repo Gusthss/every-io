@@ -1,6 +1,6 @@
 import { AuthenticationError } from 'apollo-server';
-import * as taskRepository from './task.repository.js';
-import { ITask } from './task.model.js';
+import * as taskRepository from './task.repository';
+import { ITask } from './task.model';
 
 export async function getTasks(_: any, __: any, { user }: any) {
   if (!user) throw new AuthenticationError('You must be logged in');
